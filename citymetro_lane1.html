@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>간단한 지하철 노선도</title>
+    <style>
+        body {
+            font-family: 'Malgun Gothic', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f8f9fa;
+        }
+        .subway-map {
+            display: flex;
+            align-items: center;
+        }
+        .station {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            position: relative;
+        }
+        .circle {
+            width: 24px;
+            height: 24px;
+            background-color: white;
+            border: 5px solid #0052A4; /* 1호선 색상 */
+            border-radius: 50%;
+            z-index: 2;
+        }
+        .line {
+            width: 120px;
+            height: 8px;
+            background-color: #0052A4;
+            z-index: 1;
+            margin: 0 -5px; /* 역과 선을 자연스럽게 연결 */
+        }
+        .name {
+            margin-top: 12px;
+            font-size: 16px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="subway-map">
+        <div class="station">
+            <div class="circle"></div>
+            <div class="name">수원</div>
+        </div>
+        <div class="line"></div>
+        <div class="station">
+            <div class="circle"></div>
+            <div class="name">세류</div>
+        </div>
+        <div class="line"></div>
+        <div class="station">
+            <div class="circle"></div>
+            <div class="name">병점</div>
+        </div>
+        <div class="line"></div>
+        <div class="station">
+            <div class="circle"></div>
+            <div class="name">서동탄</div>
+        </div>
+    </div>
+
+</body>
+</html>
